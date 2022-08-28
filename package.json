@@ -1,0 +1,17 @@
+{
+    "name": "@lumeweb/relay-plugin-handshake",
+    "type": "module",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "bash build.sh"
+    },
+    "devDependencies": {
+        "@lumeweb/relay": "https://github.com/LumeWeb/relay.git",
+        "esbuild": "^0.15.5"
+    },
+    "dependencies": {
+        "hs-client": "^0.0.11",
+        "hsd": "^4.0.1",
+        "random-key": "^0.3.2"
+    }
+}
