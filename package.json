@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "hs-client": "^0.0.11",
-        "hsd": "^4.0.1",
+        "hsd": "https://github.com/LumeWeb/hsd.git#spv-namestate",
         "random-key": "^0.3.2"
     }
 }
