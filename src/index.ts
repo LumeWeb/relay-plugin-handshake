@@ -107,7 +107,9 @@ const plugin: Plugin = {
           throw e;
         }
 
-        return resp;
+        return {
+          data: resp,
+        };
       },
     });
   },
