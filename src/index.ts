@@ -1,9 +1,4 @@
-import type {
-  Plugin,
-  PluginAPI,
-  RPCResponse,
-  RPCRequest,
-} from "@lumeweb/relay";
+import type { Plugin, PluginAPI } from "@lumeweb/relay-types";
 // @ts-ignore
 import rand from "random-key";
 // @ts-ignore
@@ -88,10 +83,10 @@ const plugin: Plugin = {
 
     api.registerMethod("getnameresource", {
       cacheable: true,
-      async handler(request: RPCRequest): Promise<RPCResponse> {
+      async handler(name: string): Promise<any> {
         let resp;
         try {
-          resp = await client.execute("getnameresource", request.data);
+          resp = await client.execute("getnameresource", name);
         } catch (e: any) {
           e = e as Error;
           const eType = e.type.toLowerCase();
@@ -107,9 +102,7 @@ const plugin: Plugin = {
           throw e;
         }
 
-        return {
-          data: resp,
-        };
+        return resp;
       },
     });
   },

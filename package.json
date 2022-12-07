@@ -6,10 +6,11 @@
         "build": "bash build.sh"
     },
     "devDependencies": {
-        "@lumeweb/relay": "https://github.com/LumeWeb/relay.git",
+        "@types/node": "^18.11.10",
         "esbuild": "^0.15.5"
     },
     "dependencies": {
+        "@lumeweb/relay-types": "https://git.lumeweb.com/LumeWeb/relay-types.git",
         "hs-client": "^0.0.11",
         "hsd": "https://github.com/LumeWeb/hsd.git#spv-namestate",
         "random-key": "^0.3.2"
