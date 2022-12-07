@@ -1,0 +1,23 @@
+name: "lumeweb-relay-plugin-handshake"
+arch: "amd64"
+platform: "linux"
+version: "v0.1.0"
+section: "default"
+priority: "extra"
+maintainer: "Derrick Hammer contact@lumeweb.com"
+description: Handshake plugin for lumeweb-relay
+vendor: "Hammer Technologies LLC"
+homepage: "https://lumeweb.com"
+license: "MIT"
+contents:
+- src: ./build/Release/bcryto.node
+  dst: /etc/lumeweb/relay/plugins/build/Release/bcryto.node
+- src: ./build/Release/goosig.node
+  dst: /etc/lumeweb/relay/plugins/build/Release/goosig.node
+- src: ./build/Release/leveldown.node
+  dst: /etc/lumeweb/relay/plugins/build/Release/leveldown.node
+- src: ./build/Release/mrmr.node
+  dst: /etc/lumeweb/relay/plugins/build/Release/mrmr.node
+scripts:
+    postinstall: ./pkg/scripts/postinstall.sh
+    preremove: ./pkg/scripts/preremove.sh
