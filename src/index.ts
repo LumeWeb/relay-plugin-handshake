@@ -6,8 +6,10 @@ import SPVNode from "hsd/lib/node/spvnode.js";
 // @ts-ignore
 import { NodeClient } from "hs-client";
 
-async function boot(config: any) {
+async function boot(api: PluginAPI) {
   let hsdServer: SPVNode;
+
+  const { config } = api;
 
   let clientArgs = {
     network: "main",
@@ -33,20 +35,20 @@ async function boot(config: any) {
     });
     hsdServer.on("abort", async (err: any) => {
       const timeout = setTimeout(() => {
-        console.error("Shutdown is taking a long time. Exiting.");
+        api.logger.error("Shutdown is taking a long time. Exiting.");
         process.exit(3);
       }, 5000);
 
       timeout.unref();
 
       try {
-        console.error("Shutting down...");
+        api.logger.error("Shutting down...");
         await hsdServer.close();
         clearTimeout(timeout);
-        console.error((err as Error).stack);
+        api.logger.error((err as Error).stack);
         process.exit(2);
       } catch (e: any) {
-        console.error(
+        api.logger.error(
           `Error occurred during shutdown: ${(e as Error).message}`
         );
         process.exit(3);
@@ -61,7 +63,7 @@ async function boot(config: any) {
 
         hsdServer.startSync();
       } catch (e: any) {
-        console.error((e as Error).stack);
+        api.logger.error((e as Error).stack);
       }
     })();
   } else {
@@ -79,7 +81,7 @@ async function boot(config: any) {
 const plugin: Plugin = {
   name: "handshake",
   async plugin(api: PluginAPI): Promise<void> {
-    const client = await boot(api.config);
+    const client = await boot(api);
 
     api.registerMethod("getnameresource", {
       cacheable: true,
