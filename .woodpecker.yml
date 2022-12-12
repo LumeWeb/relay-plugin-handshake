@@ -2,7 +2,7 @@ pipeline:
     build:
         image: git.lumeweb.com/lumeweb/ci-node
         commands:
-            - apt-get update && apt-get install install libunbound-dev
+            - apt-get update && apt-get install libunbound-dev
             - yarn
             - yarn build
     package:
