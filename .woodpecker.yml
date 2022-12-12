@@ -5,9 +5,7 @@ pipeline:
             - apt-get update && apt-get install libunbound-dev
             - yarn
             - yarn build
-            - ls dist
-            - ls dist/*
-            - ls dist/*/*
+            - ls dist/build/Release/bcryto.node
     package:
         image: ghcr.io/goreleaser/nfpm
         commands:
