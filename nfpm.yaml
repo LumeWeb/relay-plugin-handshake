@@ -23,3 +23,5 @@ contents:
 scripts:
     postinstall: ./pkg/scripts/postinstall.sh
     preremove: ./pkg/scripts/preremove.sh
+depends:
+    - lumeweb-relay
