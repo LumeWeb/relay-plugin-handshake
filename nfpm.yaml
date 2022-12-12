@@ -20,6 +20,8 @@ contents:
   dst: /etc/lumeweb/relay/plugins/build/Release/mrmr.node
 - src: ./pkg/config.json
   dst: /etc/lumeweb/relay/config.d/handshake.json
+- src: ./dist/handshake.js
+  dst: /etc/lumeweb/relay/plugins/handshake.js
 scripts:
     postinstall: ./pkg/scripts/postinstall.sh
     preremove: ./pkg/scripts/preremove.sh
