@@ -18,6 +18,8 @@ contents:
   dst: /etc/lumeweb/relay/plugins/build/Release/leveldown.node
 - src: ./dist/build/Release/mrmr.node
   dst: /etc/lumeweb/relay/plugins/build/Release/mrmr.node
+- src: ./pkg/config.json
+  dst: /etc/lumeweb/relay/config.d/handshake.json
 scripts:
     postinstall: ./pkg/scripts/postinstall.sh
     preremove: ./pkg/scripts/preremove.sh
