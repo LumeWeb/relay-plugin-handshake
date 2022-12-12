@@ -10,13 +10,13 @@ vendor: "Hammer Technologies LLC"
 homepage: "https://lumeweb.com"
 license: "MIT"
 contents:
-- src: ./build/Release/bcryto.node
+- src: ./dist/build/Release/bcryto.node
   dst: /etc/lumeweb/relay/plugins/build/Release/bcryto.node
-- src: ./build/Release/goosig.node
+- src: ./dist/build/Release/goosig.node
   dst: /etc/lumeweb/relay/plugins/build/Release/goosig.node
-- src: ./build/Release/leveldown.node
+- src: ./dist/build/Release/leveldown.node
   dst: /etc/lumeweb/relay/plugins/build/Release/leveldown.node
-- src: ./build/Release/mrmr.node
+- src: ./dist/build/Release/mrmr.node
   dst: /etc/lumeweb/relay/plugins/build/Release/mrmr.node
 scripts:
     postinstall: ./pkg/scripts/postinstall.sh
