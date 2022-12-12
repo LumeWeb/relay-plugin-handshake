@@ -5,7 +5,7 @@ pipeline:
             - apt-get update && apt-get install libunbound-dev
             - yarn
             - yarn build
-            - ls dist/**
+            - ls dist/**/**
     package:
         image: ghcr.io/goreleaser/nfpm
         commands:
