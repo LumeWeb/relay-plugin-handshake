@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+apt install libunbound-dev
+
+
 node build.js
 mkdir -p dist/build/Release
 cp node_modules/bdb/build/Release/leveldown.node dist/build/Release/leveldown.node
