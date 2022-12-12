@@ -10,7 +10,7 @@ vendor: "Hammer Technologies LLC"
 homepage: "https://lumeweb.com"
 license: "MIT"
 contents:
-- src: ./dist/build/Release/bcryto.node
+- src: ./dist/build/Release/bcrypto.node
   dst: /etc/lumeweb/relay/plugins/build/Release/bcryto.node
 - src: ./dist/build/Release/goosig.node
   dst: /etc/lumeweb/relay/plugins/build/Release/goosig.node
