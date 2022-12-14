@@ -189,7 +189,7 @@ __metadata:
 
 "@lumeweb/relay-plugin-rollup-preset@https://git.lumeweb.com/LumeWeb/relay-plugin-rollup-preset.git":
   version: 0.0.0
-  resolution: "@lumeweb/relay-plugin-rollup-preset@https://git.lumeweb.com/LumeWeb/relay-plugin-rollup-preset.git#commit=606a1a43fafce4313b2804a84aa04dcab4e750e2"
+  resolution: "@lumeweb/relay-plugin-rollup-preset@https://git.lumeweb.com/LumeWeb/relay-plugin-rollup-preset.git#commit=2739663aa1a5e6c6ca4f45791cf72e024c67ce4d"
   dependencies:
     "@lumeweb/rollup-plugin-bundle-native-modules": "https://git.lumeweb.com/LumeWeb/rollup-plugin-bundle-native-modules.git"
     "@rollup/plugin-commonjs": ^23.0.4
