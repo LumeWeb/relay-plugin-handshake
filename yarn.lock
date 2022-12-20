@@ -189,7 +189,7 @@ __metadata:
 
 "@lumeweb/relay-plugin-rollup-preset@https://git.lumeweb.com/LumeWeb/relay-plugin-rollup-preset.git":
   version: 0.0.0
-  resolution: "@lumeweb/relay-plugin-rollup-preset@https://git.lumeweb.com/LumeWeb/relay-plugin-rollup-preset.git#commit=2739663aa1a5e6c6ca4f45791cf72e024c67ce4d"
+  resolution: "@lumeweb/relay-plugin-rollup-preset@https://git.lumeweb.com/LumeWeb/relay-plugin-rollup-preset.git#commit=00d00561d702e388f8b958d1e57ec1f621687ffa"
   dependencies:
     "@lumeweb/rollup-plugin-bundle-native-modules": "https://git.lumeweb.com/LumeWeb/rollup-plugin-bundle-native-modules.git"
     "@rollup/plugin-commonjs": ^23.0.4
@@ -212,12 +212,13 @@ __metadata:
 
 "@lumeweb/rollup-plugin-bundle-native-modules@https://git.lumeweb.com/LumeWeb/rollup-plugin-bundle-native-modules.git":
   version: 0.1.0
-  resolution: "@lumeweb/rollup-plugin-bundle-native-modules@https://git.lumeweb.com/LumeWeb/rollup-plugin-bundle-native-modules.git#commit=8ea326514be198e99584e21b6da9668045bac4d4"
+  resolution: "@lumeweb/rollup-plugin-bundle-native-modules@https://git.lumeweb.com/LumeWeb/rollup-plugin-bundle-native-modules.git#commit=1f5eb3657e6699067003be2e8ff146aef0115355"
   dependencies:
     ast-matcher: ^1.1.1
     loady: ^0.0.5
     magic-string: ^0.27.0
-  checksum: f5d36c8511c16c10c300e95431cad08622c4e11bfaaec43b56e5d72977b4e50ee7c5dcb4f776ef0287c07da68e72f5971744a61b669316acdbae613e535304fb
+    node-gyp-build: ^4.5.0
+  checksum: 5633a5b473961c01ce1fe442d38885cebba7744c63108e2ae05f956465f4e2edcfc99e5da29db8951fce1b2215fae0c91e17a94c0ede650bba2e8a1790511115
   languageName: node
   linkType: hard
 
@@ -1702,6 +1703,17 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
+  languageName: node
+  linkType: hard
+
+"node-gyp-build@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "node-gyp-build@npm:4.5.0"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: d888bae0fb88335f69af1b57a2294a931c5042f36e413d8d364c992c9ebfa0b96ffe773179a5a2c8f04b73856e8634e09cce108dbb9804396d3cc8c5455ff2db
   languageName: node
   linkType: hard
 
