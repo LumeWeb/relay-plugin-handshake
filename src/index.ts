@@ -47,7 +47,7 @@ async function boot(api: PluginAPI) {
       logFile: true,
       logConsole: true,
       logLevel: "info",
-      workers: true,
+      workers: false,
       network: "main",
       bip37: true,
     });
