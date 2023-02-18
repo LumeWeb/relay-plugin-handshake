@@ -71,7 +71,7 @@ const plugin: Plugin = {
   name: "handshake",
   async plugin(_api: PluginAPI): Promise<void> {
     api = _api;
-    await boot(api);
+    boot(api);
     const proxy = new Proxy({
       swarm: api.swarm,
       protocol: PROTOCOL,
